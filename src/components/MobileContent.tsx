@@ -69,7 +69,7 @@ export default function MobileContent(props: { datas: CardProps[] }) {
           <p className="text-3xl font-normal text-blue-300">HEALTH</p>
           <div className="text-2xl font-extralight space-x-10">
             <i
-              className="fal fa-chevron-left opacity-50"
+              className="fal fa-chevron-left"
               onClick={() => buttonScroll(-50, healRef)}
             />
             <i

@@ -1,31 +1,31 @@
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {
-        mons: ['Montserrat']
+        mons: ["Montserrat"],
       },
     },
     borderWidth: {
-      '0':'0px',
-      '1':'1px',
-      '2':'2px',
-      '3':'3px',
-      '4':'4px',
-      '6':'6px',
-      '8':'8px'
+      0: "0px",
+      1: "1px",
+      2: "2px",
+      3: "3px",
+      4: "4px",
+      6: "6px",
+      8: "8px",
     },
     container: {
-      center: true
+      center: true,
     },
   },
   variants: {
     extend: {
-      borderWidth: ['hover','focus'],
-      padding: ['hover', 'focus'],
-      fontWeight: ['hover', 'focus'],
+      borderWidth: ["hover", "focus"],
+      padding: ["hover", "focus"],
+      fontWeight: ["hover", "focus"],
     },
   },
   plugins: [],
-}
+};
