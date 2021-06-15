@@ -25,7 +25,11 @@ export default function WebContent(props: { datas: CardProps[] }) {
   return (
     <>
       {/* Navigation */}
-      <div className="flex place-content-center space-x-16 text-lg text-gray-400 font-medium border-b-1" data-aos="fade-up">
+      <div
+        className="flex place-content-center space-x-16 text-lg text-gray-400 font-medium border-b-1"
+        data-aos="fade-up"
+        data-aos-once="true"
+      >
         <div>
           <button
             className={`${
@@ -76,9 +80,21 @@ export default function WebContent(props: { datas: CardProps[] }) {
         {state.filtered
           ? props.datas
               .filter((data) => data.category === state.selected)
-              .map((data, i) => <Card data={data} key={i} isMobile={false} animateDelay={(i%3)*500} />)
+              .map((data, i) => (
+                <Card
+                  data={data}
+                  key={i}
+                  isMobile={false}
+                  animateDelay={(i % 3) * 200}
+                />
+              ))
           : props.datas.map((data, i) => (
-              <Card data={data} key={i} isMobile={false} animateDelay={(i%3)*500} />
+              <Card
+                data={data}
+                key={i}
+                isMobile={false}
+                animateDelay={(i % 3) * 200}
+              />
             ))}
       </div>
     </>

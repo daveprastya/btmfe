@@ -2,7 +2,7 @@ import React from "react";
 import WebContent from "./WebContent";
 import MobileContent from "./MobileContent";
 import Aos from "aos";
-import 'aos/dist/aos.css';
+import "aos/dist/aos.css";
 
 export default function MainBody() {
   React.useEffect(() => {
@@ -97,10 +97,18 @@ export default function MainBody() {
 
   return (
     <div className="text-center">
-      <div className="md:text-6xl text-4xl text-blue-300 font-light mt-14 mb-10" data-aos="fade-up">
+      <div
+        className="md:text-6xl text-4xl text-blue-300 font-light mt-14 mb-10"
+        data-aos="fade-up"
+        data-aos-once="true"
+      >
         #BeautyThatMoves
       </div>
-      <div className="md:text-lg text-base md:px-96 px-8 mb-14" data-aos="fade-up">
+      <div
+        className="md:text-lg text-base md:px-96 px-8 mb-14"
+        data-aos="fade-up"
+        data-aos-once="true"
+      >
         Who is the beauty that moves you? Be inspired by these women, or better
         yet, join the movement @women.in.movement
       </div>

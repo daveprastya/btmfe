@@ -33,7 +33,7 @@ export default function Footer() {
         <div className="bg-white h-10 w-10 rounded-full flex items-center">
           <img
             className="m-auto"
-            src="https://lh3.googleusercontent.com/LTtcL7ILZXVlf1cidYr7Lkg2uUGK2y3wuTRSIikYb406kZi9mBWRxdwsbFitv58jl0lm6J4Z5R27W4j4RWS23bmsiGe0HlQLKRx1r-026ueggHvpqQk0eE7izfA2jEPWQHxHG3IQ6nSOI_eR6zLnEAg6j7vyAP3QLHMgj07j9-jnzFkj_g92N7KiIp7Xgm_GGRJyCS-bM330omL0T1f0ZKjj2kMvcAv7fEpppUMpSgcOWFe4MbHmGLGJqdTskcjHdztt7V0oyiS7Z84v1ZTle05yJI_SHotMiu4OKQ1bKow0wPy-0MFMrBIy4db7WPTKNU8dtPrccsf464zxiVkFCma6N9k2ymLnS7spiJAlZNmuEa40WHZDZihPxpHNXqHLeq8XLB6jpxt5hMULg9e_1V08zaYeGNqMhhvI3k_NYGB8yxrnc3fAWwVaSfL8W5gL_yOPoPw8t45kAYz4yK5wbuvLjlw_Sp3qcg5S6pZKRZdixS8Zw12R1xEwGPyXz91_sIT511Xdmk0ELKRwdVFVTrvNJCxZQgb2Yc_SbZCm40RD23Pz0SiVGNtyrG0gALqb0v-RxNIi8GbaMMUcZxiIyxT10UFx5j_8iVaKD3-h4z4sCmEW8_MKMwTh7i0iBdT3iZUBHqbpP7AOSctuDHbvMZu1Uloby905JNCircesJuniRYxm-69OUNkEGo0nPXEDjbLKsf5iHr6jQB3ut3pdFT_Nhw=s20-no?authuser=0"
+            src="https://firebasestorage.googleapis.com/v0/b/dave-test-apps.appspot.com/o/files%2FVector.png?alt=media&token=6d0a94ab-8c61-4001-9954-cc997f916451"
           />
         </div>
         <div className="bg-white h-10 w-10 rounded-full flex items-center">
