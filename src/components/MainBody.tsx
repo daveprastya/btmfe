@@ -105,7 +105,7 @@ export default function MainBody() {
         #BeautyThatMoves
       </div>
       <div
-        className="md:text-lg text-base md:px-96 px-8 mb-14"
+        className="md:text-lg text-base px-8 pb-14 md:m-auto md:w-1/2"
         data-aos="fade-up"
         data-aos-once="true"
       >
