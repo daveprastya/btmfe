@@ -7,13 +7,16 @@ export interface CardProps {
   category: string;
 }
 
-export default function Card(props: { data: CardProps; isMobile: boolean }) {
+export default function Card(props: { data: CardProps; isMobile: boolean; animateDelay: number }) {
   const [toogle, setToogle] = React.useState<boolean>(false);
   return (
     <div
       className={`${
         props.isMobile ? "w-64 flex-shrink-0" : "max-w-xs"
       } flex flex-col mb-12`}
+      data-aos="fade-up"
+      data-aos-once="true"
+      data-aos-delay={props.animateDelay}
     >
       <div className="relative">
         <img src={props.data.image} />

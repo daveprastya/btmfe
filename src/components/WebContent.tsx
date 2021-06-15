@@ -22,11 +22,10 @@ export default function WebContent(props: { datas: CardProps[] }) {
       });
     }
   };
-  const [selectedButton, setSelectedButton] = React.useState<string>("ALL");
   return (
     <>
       {/* Navigation */}
-      <div className="flex place-content-center space-x-16 text-lg text-gray-400 font-medium">
+      <div className="flex place-content-center space-x-16 text-lg text-gray-400 font-medium border-b-1" data-aos="fade-up">
         <div>
           <button
             className={`${
@@ -73,13 +72,13 @@ export default function WebContent(props: { datas: CardProps[] }) {
         </div>
       </div>
       {/* Content Card */}
-      <div className="border-t-1 border-gray-400 py-12 grid grid-cols-3 justify-items-center gap-8">
+      <div className="border-gray-400 py-12 grid grid-cols-3 justify-items-center gap-8">
         {state.filtered
           ? props.datas
               .filter((data) => data.category === state.selected)
-              .map((data, i) => <Card data={data} key={i} isMobile={false} />)
+              .map((data, i) => <Card data={data} key={i} isMobile={false} animateDelay={(i%3)*500} />)
           : props.datas.map((data, i) => (
-              <Card data={data} key={i} isMobile={false} />
+              <Card data={data} key={i} isMobile={false} animateDelay={(i%3)*500} />
             ))}
       </div>
     </>

@@ -37,7 +37,7 @@ export default function MobileContent(props: { datas: CardProps[] }) {
           className="flex flex-row space-x-4 relative overflow-x-auto pt-6 border-b-1 pr-4"
         >
           {filterEdDatas("EDUCATION").map((data, i) => (
-            <Card data={data} key={i} isMobile={true} />
+            <Card data={data} key={i} isMobile={true} animateDelay={(i%3)*500}/>
           ))}
         </div>
       </div>
@@ -60,7 +60,7 @@ export default function MobileContent(props: { datas: CardProps[] }) {
           className="flex flex-row space-x-4 relative overflow-x-auto pt-6 border-b-1 pr-4"
         >
           {filterEdDatas("ENVIRONTMENT").map((data, i) => (
-            <Card data={data} key={i} isMobile={true} />
+            <Card data={data} key={i} isMobile={true} animateDelay={(i%3)*500}/>
           ))}
         </div>
       </div>
@@ -83,7 +83,7 @@ export default function MobileContent(props: { datas: CardProps[] }) {
           className="flex flex-row space-x-4 relative overflow-x-auto pt-6 border-b-1 pr-4"
         >
           {filterEdDatas("HEALTH").map((data, i) => (
-            <Card data={data} key={i} isMobile={true} />
+            <Card data={data} key={i} isMobile={true} animateDelay={(i%3)*500}/>
           ))}
         </div>
       </div>
