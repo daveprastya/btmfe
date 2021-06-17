@@ -22,17 +22,20 @@ export default function WebContent(props: { datas: CardProps[] }) {
       });
     }
   };
-  const [selectedButton, setSelectedButton] = React.useState<string>("ALL");
   return (
     <>
       {/* Navigation */}
-      <div className="flex place-content-center space-x-16 text-lg text-gray-400 font-medium">
+      <div
+        className="flex place-content-center space-x-16 text-lg text-gray-400 font-medium border-b-1"
+        data-aos="fade-up"
+        data-aos-once="true"
+      >
         <div>
           <button
             className={`${
               state.selected === "ALL" &&
-              "text-blue-300 border-b-4 pb-7 border-blue-300 font-semibold pointer-events-none"
-            } hover:text-blue-300 hover:border-b-4 pb-8 hover:border-blue-300`}
+              "text-wardah-primary border-b-4 pb-7 border-wardah-primary font-semibold pointer-events-none"
+            } hover:text-wardah-primary hover:border-b-4 pb-8 hover:border-wardah-primary`}
             onClick={() => isFiltered("ALL")}
           >
             ALL
@@ -42,8 +45,8 @@ export default function WebContent(props: { datas: CardProps[] }) {
           <button
             className={`${
               state.selected === "EDUCATION" &&
-              "text-blue-300 border-b-4 pb-7 border-blue-300 font-semibold pointer-events-none"
-            } hover:text-blue-300 hover:border-b-4 pb-8 hover:border-blue-300`}
+              "text-wardah-primary border-b-4 pb-7 border-wardah-primary font-semibold pointer-events-none"
+            } hover:text-wardah-primary hover:border-b-4 pb-8 hover:border-wardah-primary`}
             onClick={() => isFiltered("EDUCATION")}
           >
             EDUCATION
@@ -53,8 +56,8 @@ export default function WebContent(props: { datas: CardProps[] }) {
           <button
             className={`${
               state.selected === "ENVIRONTMENT" &&
-              "text-blue-300 border-b-4 pb-7 border-blue-300 font-semibold pointer-events-none"
-            } hover:text-blue-300 hover:border-b-4 pb-8 hover:border-blue-300`}
+              "text-wardah-primary border-b-4 pb-7 border-wardah-primary font-semibold pointer-events-none"
+            } hover:text-wardah-primary hover:border-b-4 pb-8 hover:border-wardah-primary`}
             onClick={() => isFiltered("ENVIRONTMENT")}
           >
             ENVIRONTMENT
@@ -64,8 +67,8 @@ export default function WebContent(props: { datas: CardProps[] }) {
           <button
             className={`${
               state.selected === "HEALTH" &&
-              "text-blue-300 border-b-4 pb-7 border-blue-300 font-semibold pointer-events-none"
-            } hover:text-blue-300 hover:border-b-4 pb-8 hover:border-blue-300`}
+              "text-wardah-primary border-b-4 pb-7 border-wardah-primary font-semibold pointer-events-none"
+            } hover:text-wardah-primary hover:border-b-4 pb-8 hover:border-wardah-primary`}
             onClick={() => isFiltered("HEALTH")}
           >
             HEALTH
@@ -73,13 +76,25 @@ export default function WebContent(props: { datas: CardProps[] }) {
         </div>
       </div>
       {/* Content Card */}
-      <div className="border-t-1 border-gray-400 py-12 grid grid-cols-3 justify-items-center gap-8">
+      <div className="border-gray-400 py-12 grid grid-cols-3 justify-items-center gap-8">
         {state.filtered
           ? props.datas
               .filter((data) => data.category === state.selected)
-              .map((data, i) => <Card data={data} key={i} isMobile={false} />)
+              .map((data, i) => (
+                <Card
+                  data={data}
+                  key={i}
+                  isMobile={false}
+                  animateDelay={(i % 3) * 200}
+                />
+              ))
           : props.datas.map((data, i) => (
-              <Card data={data} key={i} isMobile={false} />
+              <Card
+                data={data}
+                key={i}
+                isMobile={false}
+                animateDelay={(i % 3) * 200}
+              />
             ))}
       </div>
     </>

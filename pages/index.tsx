@@ -1,3 +1,4 @@
+import React from 'react'
 import { Layout, Header, MainBody, Footer } from "../src/components";
 
 export default function Home() {
