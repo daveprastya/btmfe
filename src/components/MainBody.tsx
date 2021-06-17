@@ -1,13 +1,8 @@
 import React from "react";
 import WebContent from "./WebContent";
 import MobileContent from "./MobileContent";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 export default function MainBody() {
-  React.useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
   const datas = [
     {
       name: "Maryam",
@@ -98,14 +93,14 @@ export default function MainBody() {
   return (
     <div className="text-center">
       <div
-        className="md:text-6xl text-4xl text-blue-300 font-light mt-14 mb-10"
+        className="md:text-7xl text-4xl text-wardah-primary md:font-light font-extralight mt-14 mb-5 md:mb-10"
         data-aos="fade-up"
         data-aos-once="true"
       >
         #BeautyThatMoves
       </div>
       <div
-        className="md:text-lg text-base px-8 pb-14 md:m-auto md:w-1/2"
+        className="md:text-lg text-base px-8 pb-14 md:m-auto md:w-5/12"
         data-aos="fade-up"
         data-aos-once="true"
       >

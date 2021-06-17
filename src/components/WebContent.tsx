@@ -34,8 +34,8 @@ export default function WebContent(props: { datas: CardProps[] }) {
           <button
             className={`${
               state.selected === "ALL" &&
-              "text-blue-300 border-b-4 pb-7 border-blue-300 font-semibold pointer-events-none"
-            } hover:text-blue-300 hover:border-b-4 pb-8 hover:border-blue-300`}
+              "text-wardah-primary border-b-4 pb-7 border-wardah-primary font-semibold pointer-events-none"
+            } hover:text-wardah-primary hover:border-b-4 pb-8 hover:border-wardah-primary`}
             onClick={() => isFiltered("ALL")}
           >
             ALL
@@ -45,8 +45,8 @@ export default function WebContent(props: { datas: CardProps[] }) {
           <button
             className={`${
               state.selected === "EDUCATION" &&
-              "text-blue-300 border-b-4 pb-7 border-blue-300 font-semibold pointer-events-none"
-            } hover:text-blue-300 hover:border-b-4 pb-8 hover:border-blue-300`}
+              "text-wardah-primary border-b-4 pb-7 border-wardah-primary font-semibold pointer-events-none"
+            } hover:text-wardah-primary hover:border-b-4 pb-8 hover:border-wardah-primary`}
             onClick={() => isFiltered("EDUCATION")}
           >
             EDUCATION
@@ -56,8 +56,8 @@ export default function WebContent(props: { datas: CardProps[] }) {
           <button
             className={`${
               state.selected === "ENVIRONTMENT" &&
-              "text-blue-300 border-b-4 pb-7 border-blue-300 font-semibold pointer-events-none"
-            } hover:text-blue-300 hover:border-b-4 pb-8 hover:border-blue-300`}
+              "text-wardah-primary border-b-4 pb-7 border-wardah-primary font-semibold pointer-events-none"
+            } hover:text-wardah-primary hover:border-b-4 pb-8 hover:border-wardah-primary`}
             onClick={() => isFiltered("ENVIRONTMENT")}
           >
             ENVIRONTMENT
@@ -67,8 +67,8 @@ export default function WebContent(props: { datas: CardProps[] }) {
           <button
             className={`${
               state.selected === "HEALTH" &&
-              "text-blue-300 border-b-4 pb-7 border-blue-300 font-semibold pointer-events-none"
-            } hover:text-blue-300 hover:border-b-4 pb-8 hover:border-blue-300`}
+              "text-wardah-primary border-b-4 pb-7 border-wardah-primary font-semibold pointer-events-none"
+            } hover:text-wardah-primary hover:border-b-4 pb-8 hover:border-wardah-primary`}
             onClick={() => isFiltered("HEALTH")}
           >
             HEALTH

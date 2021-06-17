@@ -18,8 +18,12 @@ export default function MobileContent(props: { datas: CardProps[] }) {
   return (
     <div className="text-left ml-4">
       <div>
-        <div className="flex place-content-between mr-4" data-aos="fade-up">
-          <p className="text-3xl font-normal text-blue-300">EDUCATION</p>
+        <div
+          className="flex place-content-between mr-4"
+          data-aos="fade-up"
+          data-aos-once="true"
+        >
+          <p className="text-4xl font-light text-wardah-primary">EDUCATION</p>
           <div className="text-2xl font-extralight space-x-10">
             <i
               className={`fal fa-chevron-left`}
@@ -37,13 +41,22 @@ export default function MobileContent(props: { datas: CardProps[] }) {
           className="flex flex-row space-x-4 relative overflow-x-auto pt-6 border-b-1 pr-4"
         >
           {filterEdDatas("EDUCATION").map((data, i) => (
-            <Card data={data} key={i} isMobile={true} animateDelay={(i%3)*200}/>
+            <Card
+              data={data}
+              key={i}
+              isMobile={true}
+              animateDelay={(i % 3) * 200}
+            />
           ))}
         </div>
       </div>
       <div className="pt-8">
-        <div className="flex place-content-between mr-4" data-aos="fade-up">
-          <p className="text-3xl font-normal text-blue-300">ENVIRONTMENT</p>
+        <div
+          className="flex place-content-between mr-4"
+          data-aos="fade-up"
+          data-aos-once="true"
+        >
+          <p className="text-4xl font-light text-wardah-primary">ENVIRONTMENT</p>
           <div className="text-2xl font-extralight space-x-10">
             <i
               className="fal fa-chevron-left"
@@ -60,13 +73,22 @@ export default function MobileContent(props: { datas: CardProps[] }) {
           className="flex flex-row space-x-4 relative overflow-x-auto pt-6 border-b-1 pr-4"
         >
           {filterEdDatas("ENVIRONTMENT").map((data, i) => (
-            <Card data={data} key={i} isMobile={true} animateDelay={(i%3)*200}/>
+            <Card
+              data={data}
+              key={i}
+              isMobile={true}
+              animateDelay={(i % 3) * 200}
+            />
           ))}
         </div>
       </div>
       <div className="pt-8">
-        <div className="flex place-content-between mr-4" data-aos="fade-up">
-          <p className="text-3xl font-normal text-blue-300">HEALTH</p>
+        <div
+          className="flex place-content-between mr-4"
+          data-aos="fade-up"
+          data-aos-once="true"
+        >
+          <p className="text-4xl font-light text-wardah-primary">HEALTH</p>
           <div className="text-2xl font-extralight space-x-10">
             <i
               className="fal fa-chevron-left"
@@ -83,7 +105,12 @@ export default function MobileContent(props: { datas: CardProps[] }) {
           className="flex flex-row space-x-4 relative overflow-x-auto pt-6 border-b-1 pr-4"
         >
           {filterEdDatas("HEALTH").map((data, i) => (
-            <Card data={data} key={i} isMobile={true} animateDelay={(i%3)*200}/>
+            <Card
+              data={data}
+              key={i}
+              isMobile={true}
+              animateDelay={(i % 3) * 200}
+            />
           ))}
         </div>
       </div>
