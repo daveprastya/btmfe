@@ -28,7 +28,6 @@ export default function WebContent(props: { datas: CardProps[] }) {
       <div
         className="flex place-content-center space-x-16 text-lg text-gray-400 font-medium border-b-1"
         data-aos="fade-up"
-        data-aos-once="true"
       >
         <div>
           <button

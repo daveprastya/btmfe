@@ -1,4 +1,5 @@
 import React from "react";
+import Aos from "aos";
 export interface CardProps {
   name: string;
   job: string;
@@ -15,17 +16,18 @@ export default function Card(props: {
   const [toogle, setToogle] = React.useState<boolean>(false);
   return (
     <div
-      className={`${
+      className={`flex flex-col mb-12 ${
         props.isMobile ? "w-64 flex-shrink-0" : "max-w-xs"
-      } flex flex-col mb-12`}
-      data-aos="fade-up"
-      data-aos-once="true"
+      }`}
+      data-aos={props.isMobile ? "" : "fade-up"}
       data-aos-delay={props.animateDelay}
     >
       <div className="relative">
         <img src={props.data.image} />
         <div className="text-wardah-primary absolute w-11/12 -mt-14 mx-auto left-0 right-0 text-center">
-          <button className="py-1 px-5 w-11/12 bg-wardah-button text-lg">VOTE</button>
+          <button className="py-1 px-5 w-11/12 bg-wardah-button text-lg">
+            VOTE
+          </button>
         </div>
       </div>
       <div className="bg-wardah-pink text-sm text-wardah-danger font-semibold self-start py-1 px-3 my-5">
@@ -47,7 +49,7 @@ export default function Card(props: {
           className="border-1 border-wardah-primary py-2 px-5"
           onClick={() => setToogle(!toogle)}
         >
-          READ MORE
+          {!toogle ? "READ MORE" : "READ LESS"}
         </button>
       </div>
     </div>
