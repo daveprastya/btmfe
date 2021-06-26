@@ -20,8 +20,6 @@ export default function MobileContent(props: { datas: CardProps[] }) {
       <div>
         <div
           className="flex place-content-between mr-4"
-          data-aos="fade-up"
-          data-aos-once="true"
         >
           <p className="text-4xl font-light text-wardah-primary">EDUCATION</p>
           <div className="text-2xl font-extralight space-x-10">
@@ -53,8 +51,6 @@ export default function MobileContent(props: { datas: CardProps[] }) {
       <div className="pt-8">
         <div
           className="flex place-content-between mr-4"
-          data-aos="fade-up"
-          data-aos-once="true"
         >
           <p className="text-4xl font-light text-wardah-primary">ENVIRONTMENT</p>
           <div className="text-2xl font-extralight space-x-10">
@@ -85,8 +81,6 @@ export default function MobileContent(props: { datas: CardProps[] }) {
       <div className="pt-8">
         <div
           className="flex place-content-between mr-4"
-          data-aos="fade-up"
-          data-aos-once="true"
         >
           <p className="text-4xl font-light text-wardah-primary">HEALTH</p>
           <div className="text-2xl font-extralight space-x-10">

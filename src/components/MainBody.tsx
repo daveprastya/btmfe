@@ -1,118 +1,65 @@
 import React from "react";
 import WebContent from "./WebContent";
 import MobileContent from "./MobileContent";
+import { CardProps } from "../components/Card";
 
 export default function MainBody() {
-  const datas = [
-    {
-      name: "Maryam",
-      job: "Mahasiswa",
-      description: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.`,
-      category: "EDUCATION",
-      image: "https://picsum.photos/371/550",
-    },
-    {
-      name: "Amirah",
-      job: "Pelajar",
-      description: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.`,
-      category: "HEALTH",
-      image: "https://picsum.photos/371/550",
-    },
-    {
-      name: "Siti Fatimah H...",
-      job: "Entepreneur",
-      description: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.`,
-      category: "ENVIRONTMENT",
-      image: "https://picsum.photos/371/550",
-    },
-    {
-      name: "Maryam",
-      job: "Mahasiswa",
-      description: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.`,
-      category: "EDUCATION",
-      image: "https://picsum.photos/371/550",
-    },
-    {
-      name: "Amirah",
-      job: "Pelajar",
-      description: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.`,
-      category: "HEALTH",
-      image: "https://picsum.photos/371/550",
-    },
-    {
-      name: "Siti Fatimah H...",
-      job: "Entepreneur",
-      description: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.`,
-      category: "ENVIRONTMENT",
-      image: "https://picsum.photos/371/550",
-    },
-    {
-      name: "Maryam",
-      job: "Mahasiswa",
-      description: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.`,
-      category: "EDUCATION",
-      image: "https://picsum.photos/371/550",
-    },
-    {
-      name: "Amirah",
-      job: "Pelajar",
-      description: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.`,
-      category: "HEALTH",
-      image: "https://picsum.photos/371/550",
-    },
-    {
-      name: "Siti Fatimah H...",
-      job: "Entepreneur",
-      description: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.`,
-      category: "ENVIRONTMENT",
-      image: "https://picsum.photos/371/550",
-    },
-    {
-      name: "Maryam",
-      job: "Mahasiswa",
-      description: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.`,
-      category: "EDUCATION",
-      image: "https://picsum.photos/371/550",
-    },
-    {
-      name: "Amirah",
-      job: "Pelajar",
-      description: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.`,
-      category: "HEALTH",
-      image: "https://picsum.photos/371/550",
-    },
-    {
-      name: "Siti Fatimah H...",
-      job: "Entepreneur",
-      description: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.`,
-      category: "ENVIRONTMENT",
-      image: "https://picsum.photos/371/550",
-    },
-  ];
+  const [isMobile, setIsMobile] = React.useState<boolean>(false);
+  const [candidates, setCandidates] = React.useState<CardProps[]>([]);
+  const reff = React.useRef<HTMLDivElement | null>(null);
+  const fetchDatas = async () => {
+    const req = await fetch(`${process.env.NEXT_PUBLIC_API}`);
+    const res = await req.json();
+    // @ts-ignore
+    const candidates = res.map((candidate) => {
+      return {
+        name: candidate.name,
+        job: candidate.job,
+        description: candidate.description,
+        category: candidate.category.title,
+        image: candidate.imgUrl,
+      };
+    });
+    await setCandidates(candidates);
+  };
+
+  React.useEffect(() => {
+    fetchDatas();
+  }, []);
+
+  React.useEffect(() => {
+    if (reff) {
+      // @ts-ignore
+      if (reff.current?.clientWidth >= 768) {
+        setIsMobile(false);
+      } else {
+        setIsMobile(true);
+      }
+    }
+  }, [reff.current]);
 
   return (
-    <div className="text-center">
+    <div className="text-center" ref={reff}>
       <div
         className="md:text-7xl text-4xl text-wardah-primary md:font-light font-extralight mt-14 mb-5 md:mb-10"
-        data-aos="fade-up"
-        data-aos-once="true"
+        data-aos={isMobile ? "" : "fade-up"}
       >
         #BeautyThatMoves
       </div>
       <div
         className="md:text-lg text-base px-8 pb-14 md:m-auto md:w-5/12"
-        data-aos="fade-up"
-        data-aos-once="true"
+        data-aos={isMobile ? "" : "fade-up"}
       >
         Who is the beauty that moves you? Be inspired by these women, or better
         yet, join the movement @women.in.movement
       </div>
-      <div className="md:flex md:flex-col hidden mx-32">
-        <WebContent datas={datas} />
-      </div>
-      <div className="md:hidden">
-        <MobileContent datas={datas} />
-      </div>
+      {isMobile ? (
+        <MobileContent datas={candidates} />
+      ) : (
+        <div className="md:flex md:flex-col hidden mx-32">
+          <WebContent datas={candidates} />
+        </div>
+      )}
     </div>
   );
 }
