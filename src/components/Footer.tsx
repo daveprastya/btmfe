@@ -11,37 +11,52 @@ export default function Footer() {
         <div className="md:w-full w-3/6 m-auto text-center text-base leading-none">
           <p className="mr-1 md:text-lg font-thin">
             Visit our website at
-            <span> <a
-              className="underline font-medium"
-              href="http://www.wardahbeauty.com"
-            >
-               www.wardahbeauty.com
-            </a></span>
+            <span>
+              {" "}
+              <a
+                className="underline font-medium"
+                href="http://www.wardahbeauty.com"
+              >
+                www.wardahbeauty.com
+              </a>
+            </span>
           </p>
         </div>
       </div>
       <div className="flex flex-row border-t-1 border-opacity-5 md:mx-28 mx-3 py-8 place-content-center space-x-4 text-wardah-primary">
-        <div className="bg-white h-10 w-10 rounded-full flex items-center">
-          <i className="fab fa-instagram m-auto text-xl" />
-        </div>
-        <div className="bg-white h-10 w-10 rounded-full flex items-center">
-          <i className="fab fa-facebook-f m-auto" />
-        </div>
-        <div className="bg-white h-10 w-10 rounded-full flex items-center">
-          <i className="fab fa-twitter m-auto" />
-        </div>
-        <div className="bg-white h-10 w-10 rounded-full flex items-center">
-          <i className="fas fa-phone-alt m-auto" />
-        </div>
-        <div className="bg-white h-10 w-10 rounded-full flex items-center">
-          <img
-            className="m-auto"
-            src="https://firebasestorage.googleapis.com/v0/b/dave-test-apps.appspot.com/o/files%2FVector.png?alt=media&token=6d0a94ab-8c61-4001-9954-cc997f916451"
-          />
-        </div>
-        <div className="bg-white h-10 w-10 rounded-full flex items-center">
-          <i className="fab fa-youtube m-auto" />
-        </div>
+        <a href="https://www.instagram.com/wardahbeauty/" target="_blank">
+          <div className="bg-white h-10 w-10 rounded-full flex items-center">
+            <i className="fab fa-instagram m-auto text-xl" />
+          </div>
+        </a>
+        <a href="https://www.facebook.com/wardahbeauty" target="_blank">
+          <div className="bg-white h-10 w-10 rounded-full flex items-center">
+            <i className="fab fa-facebook-f m-auto" />
+          </div>
+        </a>
+        <a href="https://twitter.com/wardahbeauty" target="_blank">
+          <div className="bg-white h-10 w-10 rounded-full flex items-center">
+            <i className="fab fa-twitter m-auto" />
+          </div>
+        </a>
+        <a href="tel:628041401123" target="_blank">
+          <div className="bg-white h-10 w-10 rounded-full flex items-center">
+            <i className="fas fa-phone-alt m-auto" />
+          </div>
+        </a>
+        <a href="https://api.whatsapp.com/send/?phone=6287701123000&text&app_absent=0" target="_blank">
+          <div className="bg-white h-10 w-10 rounded-full flex items-center">
+            <img
+              className="m-auto"
+              src="https://firebasestorage.googleapis.com/v0/b/dave-test-apps.appspot.com/o/files%2FVector.png?alt=media&token=6d0a94ab-8c61-4001-9954-cc997f916451"
+            />
+          </div>
+        </a>
+        <a href="https://www.youtube.com/user/WardahBeauty" target="_blank">
+          <div className="bg-white h-10 w-10 rounded-full flex items-center">
+            <i className="fab fa-youtube m-auto" />
+          </div>
+        </a>
       </div>
     </div>
   );

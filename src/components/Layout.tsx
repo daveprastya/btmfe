@@ -19,7 +19,7 @@ export default function Layout(props: LayoutProps) {
           crossOrigin="anonymous"
         />
       </Head>
-      <div className="overflow-auto">{props.children}</div>
+      <div className="overflow-hidden">{props.children}</div>
     </>
   );
 }
