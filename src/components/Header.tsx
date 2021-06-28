@@ -10,7 +10,7 @@ export default function Header() {
         backgroundPosition: "center center",
       }}
     >
-      <div className="md:text-4xl text-2xl text-center md:w-full w-7/12 m-auto mx-auto md:font-normal font-light md:flex md:justify-center">
+      <div className="md:text-4xl text-2xl text-center md:w-full w-9/12 m-auto mx-auto md:font-normal font-light md:flex md:justify-center">
         <div className="md:w-96 md:text-right md:mr-2">BEAUTY THAT MOVES </div>
         <div className="flex h-4 md:justify-start justify-center md:h-8 mt-1 md:w-40 md:hidden">
           <p className="text-xs">by</p>
