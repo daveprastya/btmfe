@@ -86,7 +86,7 @@ export default function MainBody() {
               #BeautyThatMoves
             </motion.div>
             <motion.div
-              className="md:text-lg text-base px-8 pb-14 md:m-auto md:w-5/12"
+              className="md:text-lg text-base px-8 pb-14 md:m-auto lg:w-5/12 md:w-7/12"
               animate={inView && animate} 
               initial={init}
               transition={{
