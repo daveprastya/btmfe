@@ -42,8 +42,8 @@ export default function Card(props: {
               }}
             >
               <div className="relative">
-                <img src={props.data.image} />
-                <div className="text-wardah-primary absolute w-11/12 -mt-14 mx-auto left-0 right-0 text-center">
+                <img src={props.data.image} style={{ height: props.isMobile ? "384px" : "480px" }} />
+                <div className="text-wardah-primary absolute -mt-14 w-11/12 mx-auto left-0 right-0 text-center">
                   <button
                     className="py-1 px-5 w-11/12 bg-wardah-button text-lg"
                     onClick={() => props.modal()}
