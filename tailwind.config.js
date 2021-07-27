@@ -6,6 +6,14 @@ module.exports = {
       fontFamily: {
         mons: ["Montserrat"],
       },
+      colors: {
+        wardah: {
+          primary: "#7FC7C6",
+          button: "#006F7A",
+          pink: "#FDE5DB",
+          danger: "#EB8871",
+        }
+      }
     },
     borderWidth: {
       0: "0px",
