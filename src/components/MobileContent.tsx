@@ -2,7 +2,7 @@ import React, { MutableRefObject } from "react";
 import Card, { CardProps } from "./Card";
 import { InView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import { AnimateProps, TransitionProps } from "./MainBody";
+import { AnimateProps, TransitionProps } from "../../pages/index";
 
 export default function MobileContent(props: {
   datas: CardProps[];
@@ -32,7 +32,7 @@ export default function MobileContent(props: {
         {({ inView, ref, entry }) => (
           <div ref={ref}>
             <motion.div
-              animate={inView && animate}
+              animate={inView ? animate : init}
               initial={init}
               transition={transition}
             >
@@ -78,7 +78,7 @@ export default function MobileContent(props: {
           <div ref={ref}>
             <motion.div
               className="pt-8"
-              animate={inView && animate}
+              animate={inView ? animate : init}
               initial={init}
               transition={transition}
             >
@@ -123,7 +123,7 @@ export default function MobileContent(props: {
           <div ref={ref}>
             <motion.div
               className="pt-8"
-              animate={inView && animate}
+              animate={inView ? animate : init}
               initial={init}
               transition={transition}
             >

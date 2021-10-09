@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
@@ -5,6 +7,8 @@ module.exports = {
     extend: {
       fontFamily: {
         mons: ["Montserrat"],
+        TTnorm: ["TT Norms Pro Regular", "TT Norms Pro Italic"],
+        TTnormB: ["TT Norms Pro Bold", "TT Norms Pro Bold Italic"],
       },
       colors: {
         wardah: {
@@ -12,8 +16,8 @@ module.exports = {
           button: "#006F7A",
           pink: "#FDE5DB",
           danger: "#EB8871",
-        }
-      }
+        },
+      },
     },
     borderWidth: {
       0: "0px",
@@ -26,6 +30,10 @@ module.exports = {
     },
     container: {
       center: true,
+    },
+    screens: {
+      xs: "500px",
+      ...defaultTheme.screens,
     },
   },
   variants: {
