@@ -2,7 +2,7 @@ import React from "react";
 import Card, { CardProps } from "./Card";
 import { InView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import { AnimateProps, TransitionProps } from "./MainBody";
+import { AnimateProps, TransitionProps } from "../../pages/index";
 
 export default function WebContent(props: {
   datas: CardProps[];
@@ -41,7 +41,7 @@ export default function WebContent(props: {
           <div ref={ref}>
             <motion.div
               className="flex place-content-center space-x-16 text-lg text-gray-400 font-medium border-b-1"
-              animate={inView && animate}
+              animate={inView ? animate : init}
               initial={init}
               transition={transition}
             >
