@@ -12,144 +12,130 @@ export default function Header(props: {
   const reff = React.useRef<HTMLDivElement | null>(null);
   return (
     <div ref={reff}>
-      <InView threshold={0.2}>
+      <InView>
         {({ inView, ref, entry }) => (
-          <div
-            className="pt-4 text-white w-full grid lg:grid-cols-3 grid-cols-1 lg:bg-cover"
-            style={{
-              height: "900px",
-              backgroundImage: "url('/background1.png')",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center center",
-            }}
-            ref={ref}
-          >
-            <img
-              src={"/Wardah-white.png"}
-              className="xs:justify-self-start justify-self-center xs:pl-28 lg:w-full xs:w-60 w-36"
-            />
-            <motion.div
-              className="text-wardah-primary font-TTnorm inline lg:hidden justify-self-center -mt-60 xs:text-left text-center"
-              animate={
-                inView && {
-                  x: 0,
-                  opacity: 1,
-                }
-              }
-              initial={{
-                x: "100vh",
-                opacity: 0,
-              }}
-              transition={transition}
-            >
-              <p className="xs:text-7xl pb-3 text-5xl">BEAUTY</p>
-              <p className="xs:text-7xl pb-3 text-5xl">MOVE YOU</p>
-              <p className="xs:text-3xl text-xl">Bergerak membawa manfaat</p>
-            </motion.div>
-            <motion.div
-              className="w-full h-auto lg:hidden xs:bg-cover bg-contain bg-no-repeat -mt-60"
+          <div ref={ref}>
+            <div
+              className="pt-4 text-white w-full lg:grid lg:grid-cols-3 grid-cols-1 lg:bg-cover hidden"
               style={{
-                backgroundImage: "url('/talent-mobile.png')",
+                height: "900px",
+                backgroundImage: "url('/background.png')",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center center",
               }}
-              animate={inView && animate}
-              initial={init}
-              transition={transition}
-            ></motion.div>
-            <div className="hidden lg:inline"></div>
-            <div className="hidden lg:inline"></div>
-            <motion.img
-              src={"/talent.png"}
-              className="hidden lg:absolute lg:inline mt-28 w-full"
-              animate={inView && animate}
-              initial={init}
-              transition={transition}
-            />
-            <div className="lg:col-span-2 lg:inline hidden"></div>
-            <motion.div
-              className="text-wardah-primary font-TTnorm mt-32 lg:inline hidden"
-              animate={
-                inView && {
-                  x: 0,
-                  opacity: 1,
-                }
-              }
-              initial={{
-                x: "100vh",
-                opacity: 0,
-              }}
-              transition={transition}
             >
-              <p className="text-7xl pb-3">BEAUTY</p>
-              <p className="text-7xl pb-3">MOVE YOU</p>
-              <p className="text-3xl">Bergerak membawa manfaat</p>
-            </motion.div>
-          </div>
-        )}
-      </InView>
-      <InView threshold={0.2}>
-        {({ inView, ref, entry }) => (
-          <div className="grid grid-cols-2 mt-10" ref={ref}>
-            <div>
+              <div>
+                <a href="https://www.wardahbeauty.com/" target="_blank">
+                  <img
+                    src={"/logo-wardah-hijau-tua.png"}
+                    className="justify-self-start ml-5 w-20 mt-3 lg:inline hidden"
+                  />
+                </a>
+              </div>
+              <div className="hidden lg:inline"></div>
+              <div className="hidden lg:inline"></div>
+              <motion.img
+                src={"/talent.png"}
+                className="hidden lg:absolute lg:inline mt-16 w-full"
+                animate={inView && animate}
+                initial={init}
+                transition={transition}
+              />
+              <div className="lg:col-span-2 lg:inline hidden"></div>
               <motion.div
-                className="w-1/2 mt-10"
-                animate={inView ? animate : { y: "-100vh", opacity: 0 }}
-                initial={{ y: "-100vh", opacity: 0 }}
+                className="text-wardah-ardent font-TTnormXS mt-32 lg:inline hidden text-center"
+                animate={
+                  inView && {
+                    x: 0,
+                    opacity: 1,
+                  }
+                }
+                initial={{
+                  x: "100vh",
+                  opacity: 0,
+                }}
                 transition={transition}
               >
-                <img
-                  src={"/abstract-foundation.png"}
-                  className="bg-cover"
-                  style={{
-                    borderTopLeftRadius: "30%",
-                    borderBottomRightRadius: "30%",
-                    marginLeft: "50%",
-                  }}
-                />
+                <div className="flex">
+                  <div className="-ml-28">
+                    <p
+                      className="font-TTnormT h-auto"
+                      style={{ fontSize: "200px", lineHeight: "80%" }}
+                    >
+                      #
+                    </p>
+                  </div>
+                  <div>
+                    <p className="xl:text-8xl text-7xl pb-3">BEAUTY</p>
+                    <p className="xl:text-7xl text-5xl pb-3">MOVE YOU</p>
+                    <p className="xl:text-3xl text-xl font-TTnorm">
+                      Bergerak membawa manfaat
+                    </p>
+                  </div>
+                </div>
               </motion.div>
+            </div>
+            <div
+              className="pt-4 text-white w-full grid lg:grid-cols-3 grid-cols-1 lg:bg-cover lg:hidden"
+              style={{
+                // height: "800px",
+                backgroundImage: "url('/background.png')",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center center",
+              }}
+            >
+              <div className="lg:hidden inline">
+                <div>
+                  <a href="https://www.wardahbeauty.com/" target="_blank">
+                    <img
+                      src={"/logo-wardah-hijau-tua.png"}
+                      className="xs:justify-self-start justify-self-center ml-5 w-20 mt-3 col"
+                    />
+                  </a>
+                </div>
+                <motion.div
+                  className="text-wardah-ardent xs:text-left text-center flex justify-center mt-10"
+                  animate={
+                    inView && {
+                      x: 0,
+                      opacity: 1,
+                    }
+                  }
+                  initial={{
+                    x: "100vh",
+                    opacity: 0,
+                  }}
+                  transition={transition}
+                >
+                  <div className="flex">
+                    <div>
+                      <p
+                        className="font-TTnormT h-auto sm:text-10xl text-9xl"
+                        style={{ lineHeight: "80%" }}
+                      >
+                        #
+                      </p>
+                    </div>
+                    <div className="font-TTnormT font-bold">
+                      <p className="sm:text-8xl pb-1 text-5xl">BEAUTY</p>
+                      <p className="sm:text-7xl pb-1 text-4xl">MOVE YOU</p>
+                      <p className="sm:text-3xl text-lg">
+                        Bergerak membawa manfaat
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
               <motion.div
-                className="sm:w-1/2 w-3/5 relative"
-                animate={inView ? animate : init}
+                className="w-full h-auto lg:hidden xs:bg-cover bg-contain bg-no-repeat"
+                // style={{
+                //   backgroundImage: "url('/talent-mobile.png')",
+                // }}
+                animate={inView && animate}
                 initial={init}
                 transition={transition}
               >
-                <img
-                  src={"/header2.png"}
-                  className="bg-cover"
-                  style={{
-                    borderTopRightRadius: "30%",
-                    borderBottomLeftRadius: "30%",
-                    border: "10px solid #F8F6F5",
-                    marginTop: "-90%",
-                    marginLeft: "15%",
-                  }}
-                />
-              </motion.div>
-            </div>
-            <div className="font-TTnorm h-full flex items-center">
-              <motion.div
-                animate={
-                  inView ? { x: 0, opacity: 1 } : { x: "100vh", opacity: 0 }
-                }
-                initial={{ x: "100vh", opacity: 0 }}
-                transition={transition}
-              >
-                <p
-                  className="text-4xl mb-9"
-                  style={{
-                    background:
-                      "-webkit-linear-gradient(270deg, #80C1CB 0%, #0A7889 100%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                  }}
-                >
-                  BRAVE BEAUTIES
-                </p>
-                <p className="text-sm text-justify pr-5">
-                  The women who express their beauty boldly, with an attitude
-                  that brings beautiful impact for those around them. They are
-                  the beauty agent of change, who inspires and moves people
-                  heart to do the greater good.
-                </p>
+                <img src="/talent-mobile.png" width="100%" />
               </motion.div>
             </div>
           </div>

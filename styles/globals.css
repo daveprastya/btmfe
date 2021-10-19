@@ -35,6 +35,54 @@
     src: local("TT Norms Pro Bold Italic"),
       url(./fonts/TT-Norms-Pro-Bold-Italic.woff) format("woff");
   }
+
+  @font-face {
+    font-family: "TT Norms Pro Thin";
+    font-style: normal;
+    font-weight: normal;
+    src: local("TT Norms Pro Thin"),
+      url(./fonts/TT-Norms-Pro-Thin.woff) format("woff");
+  }
+
+  @font-face {
+    font-family: "TT Norms Pro Thin Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("TT Norms Pro Thin Italic"),
+      url(./fonts/TT-Norms-Pro-Thin-Italic.woff) format("woff");
+  }
+
+  @font-face {
+    font-family: "TT Norms Pro ExtraLight";
+    font-style: normal;
+    font-weight: normal;
+    src: local("TT Norms Pro ExtraLight"),
+      url(./fonts/TT-Norms-Pro-ExtraLight.woff) format("woff");
+  }
+
+  @font-face {
+    font-family: "TT Norms Pro ExtraLight Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("TT Norms Pro ExtraLight Italic"),
+      url(./fonts/TT-Norms-Pro-ExtraLight-Italic.woff) format("woff");
+  }
+
+  @font-face {
+    font-family: "TT Norms Pro Light";
+    font-style: normal;
+    font-weight: normal;
+    src: local("TT Norms Pro Light"),
+      url(./fonts/TT-Norms-Pro-Light.woff) format("woff");
+  }
+
+  @font-face {
+    font-family: "TT Norms Pro Light Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("TT Norms Pro Light Italic"),
+      url(./fonts/TT-Norms-Pro-Light-Italic.woff) format("woff");
+  }
 }
 
 button:focus {

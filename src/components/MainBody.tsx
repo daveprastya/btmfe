@@ -4,7 +4,7 @@ import MobileContent from "./MobileContent";
 import IframeContent from "./IframeContent";
 import { CardProps } from "../components/Card";
 import { InView } from "react-intersection-observer";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { AnimateProps, TransitionProps } from "../../pages/index";
 
 export default function MainBody(props: {
@@ -55,30 +55,43 @@ export default function MainBody(props: {
 
   return (
     <div className="text-center" ref={reff}>
-      <InView threshold={0.2}>
+      <InView threshold={[0.4, 0.2]}>
         {({ inView, ref, entry }) => (
           <div ref={ref}>
             <motion.div
-              className="md:text-7xl text-4xl text-wardah-primary md:font-light font-extralight mt-14 mb-5 md:mb-10"
-              animate={inView ? animate : init}
+              className="text-wardah-ardent font-TTnorm mt-14 mb-5 md:mb-10"
+              animate={
+                inView ||
+                (entry?.boundingClientRect.y && entry?.boundingClientRect.y < 0)
+                  ? animate
+                  : init
+              }
               initial={init}
               transition={transition}
             >
-              #BeautyThatMoves
+              <p className="sm:text-5xl text-2xl lg:mb-3 mb-1">
+                Brave Beauties adalah
+              </p>
+              <p className="sm:text-6xl text-3xl">BEAUTY THAT MOVES</p>
             </motion.div>
             <motion.div
-              className="md:text-lg text-base px-8 pb-14 md:m-auto lg:w-5/12 md:w-7/12"
-              animate={inView ? animate : init}
+              className="md:text-lg sm:text-base text-sm pb-14 md:m-auto lg:w-7/12 font-TTnorm"
+              animate={
+                inView ||
+                (entry?.boundingClientRect.y && entry?.boundingClientRect.y < 0)
+                  ? animate
+                  : init
+              }
               initial={init}
-              transition={{
-                type: "spring",
-                duration: 2,
-                bounce: 0.2,
-                delay: 0.5,
-              }}
+              transition={transition}
             >
-              Who is the beauty that moves you? Be inspired by these women, or
-              better yet, join the movement @women.in.movement
+              Mereka adalah wanita yang berani mengekspresikan kecantikannya,
+              dengan sikap yang membawa dampak baik bagi orang-orang di
+              sekitarnya. Mereka percaya bahwa dengan menggunakan kecantikan
+              mereka, suara mereka dapat didengar dengan lantang dan tindakan
+              mereka dapat dianggap serius. Mereka adalah agen perubahan
+              kecantikan, yang menginspirasi dan menggerakkan hati orang untuk
+              melakukan kebaikan yang lebih besar.
             </motion.div>
           </div>
         )}
@@ -92,7 +105,7 @@ export default function MainBody(props: {
           modal={handleToogle}
         />
       ) : (
-        <div className="md:flex md:flex-col hidden mx-32">
+        <div className="md:flex md:flex-col hidden xl:mx-32 mx-2">
           <WebContent
             datas={candidates}
             animate={animate}

@@ -23,42 +23,57 @@ export default function Card(props: {
   const [toogle, setToogle] = React.useState<boolean>(false);
   const { animate, init, animateDelay } = props;
   return (
-    <InView>
-      {({ inView, ref }) => {
-        const checkView = props.isMobile ? props.inView : inView;
+    <InView threshold={[0.4, 0.2]}>
+      {({ inView, ref, entry }) => {
+        const checkView = props.isMobile
+          ? props.inView && animate
+          : inView ||
+            (entry?.boundingClientRect.y && entry?.boundingClientRect.y < 0)
+          ? animate
+          : init;
         return (
           <div ref={ref}>
             <motion.div
               className={`flex flex-col mb-12 shadow-sm ${
-                props.isMobile ? "w-64 flex-shrink-0" : "max-w-xs"
+                props.isMobile && "w-72"
               }`}
-              animate={checkView ? animate : init}
+              animate={checkView}
               initial={init}
               transition={{
                 type: "spring",
                 duration: 2,
                 bounce: 0.2,
-                delay: animateDelay,
               }}
             >
               <div className="relative">
-                <div className="font-TTnorm text-left pb-1 h-32">
-                  <div className="py-1 h-3/4 font-extrabold text-4xl overflow-ellipsis overflow-hidden font-TTnormB">
+                <div className="font-TTnorm text-left pb-1">
+                  <div className="py-1 h-20 font-extrabold text-4xl overflow-ellipsis overflow-hidden font-TTnormB mb-3">
                     <p>
-                      {props.data.name.substr(0, props.data.name.indexOf(" ")).toUpperCase()}
+                      {props.data.name
+                        .substr(0, props.data.name.indexOf(" "))
+                        .toUpperCase()}
                     </p>
                     <p>
-                      {props.data.name.substr(props.data.name.indexOf(" ") + 1).toUpperCase()}
+                      {props.data.name
+                        .substr(props.data.name.indexOf(" ") + 1)
+                        .toUpperCase()}
                     </p>
                   </div>
-                  <div className="flex">
+                  <div className="flex h-10">
                     <div className="w-6">
                       <div className="border-b-1 border-black h-1/2"></div>
                       <div className="border-t-1 border-black h-1/2"></div>
                     </div>
-                    <p className="text-sm font-extralight py-1 ml-2">
-                      {props.data.job.toUpperCase()}
-                    </p>
+                    <div
+                      className="text-xs font-light ml-2 h-full flex"
+                      style={{
+                        WebkitLineClamp: 2,
+                      }}
+                    >
+                      <p className="self-center">
+                        {props.data.job.toUpperCase()}
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <img
@@ -67,13 +82,17 @@ export default function Card(props: {
                 />
               </div>
               <div
-                className="text-sm text-white font-semibold self-end py-1 px-5 mb-3 font-TTnorm rounded-l-full -mt-4 z-10"
+                className="text-xl text-white text-right font-semibold self-end px-1 h-6 mb-3 font-TTnormS -mt-4 z-10 w-3/5"
                 style={{
                   background:
-                    "linear-gradient(270deg, #0A7889 0%, #80C1CB 100%)",
+                    "linear-gradient(270deg, #0c7a98 0%, #99d2b2 100%)",
                 }}
               >
-                {props.data.category}
+                <p
+                  style={{ textShadow: "0.5px 0.5px gray", marginTop: "-14px" }}
+                >
+                  {props.data.category}
+                </p>
               </div>
               <div
                 className={`text-left mb-5 md:mt-5 mt-3 text-sm ${
