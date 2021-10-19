@@ -1,33 +1,146 @@
-export default function Header() {
+import React from "react";
+import { AnimateProps, TransitionProps } from "../../pages/index";
+import { motion } from "framer-motion";
+import { InView } from "react-intersection-observer";
+
+export default function Header(props: {
+  animate: AnimateProps;
+  init: AnimateProps;
+  transition: TransitionProps;
+}) {
+  const { animate, init, transition } = props;
+  const reff = React.useRef<HTMLDivElement | null>(null);
   return (
-    <div
-      className="md:pt-7 pt-4 text-white"
-      style={{
-        height: "866px",
-        backgroundImage:
-          "url('https://firebasestorage.googleapis.com/v0/b/dave-test-apps.appspot.com/o/files%2FImages%20Header%20BTM.jpg?alt=media&token=6a48a1ff-7323-431b-a808-3ef0a83072d3')",
-        backgroundSize: "cover",
-        backgroundPosition: "center center",
-      }}
-    >
-      <div className="md:text-4xl text-2xl text-center md:w-full w-9/12 m-auto mx-auto md:font-normal font-light md:flex md:justify-center">
-        <div className="md:w-96 md:text-right md:mr-2">BEAUTY THAT MOVES </div>
-        <div className="flex h-4 md:justify-start justify-center md:h-8 mt-1 md:w-40 md:hidden">
-          <p className="text-xs">by</p>
-          <img
-            className="ml-1"
-            src="https://firebasestorage.googleapis.com/v0/b/dave-test-apps.appspot.com/o/files%2Fwardah-white-logo.png?alt=media&token=f9bd2a71-1d12-4524-826a-43b384bb8672"
-          />
-        </div>
-        <div className="text-base self-end ml-1 md:flex hidden">by</div>
-        <img
-            className="ml-1 hidden md:flex h-9 self-center mt-1"
-            src="https://firebasestorage.googleapis.com/v0/b/dave-test-apps.appspot.com/o/files%2Fwardah-white-logo.png?alt=media&token=f9bd2a71-1d12-4524-826a-43b384bb8672"
-          />
-      </div>
-      <div className="md:text-8xl text-5xl text-center mt-80 md:font-light font-thin">
-        <p>BEAUTY THAT MOVES</p>
-      </div>
+    <div ref={reff}>
+      <InView>
+        {({ inView, ref, entry }) => (
+          <div ref={ref}>
+            <div
+              className="pt-4 text-white w-full lg:grid lg:grid-cols-3 grid-cols-1 lg:bg-cover hidden"
+              style={{
+                height: "900px",
+                backgroundImage: "url('/background.png')",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center center",
+              }}
+            >
+              <div>
+                <a href="https://www.wardahbeauty.com/" target="_blank">
+                  <img
+                    src={"/logo-wardah-hijau-tua.png"}
+                    className="justify-self-start ml-5 w-20 mt-3 lg:inline hidden"
+                  />
+                </a>
+              </div>
+              <div className="hidden lg:inline"></div>
+              <div className="hidden lg:inline"></div>
+              <motion.img
+                src={"/talent.png"}
+                className="hidden lg:absolute lg:inline mt-16 w-full"
+                animate={inView && animate}
+                initial={init}
+                transition={transition}
+              />
+              <div className="lg:col-span-2 lg:inline hidden"></div>
+              <motion.div
+                className="text-wardah-ardent font-TTnormXS mt-32 lg:inline hidden text-center"
+                animate={
+                  inView && {
+                    x: 0,
+                    opacity: 1,
+                  }
+                }
+                initial={{
+                  x: "100vh",
+                  opacity: 0,
+                }}
+                transition={transition}
+              >
+                <div className="flex">
+                  <div className="-ml-28">
+                    <p
+                      className="font-TTnormT h-auto"
+                      style={{ fontSize: "200px", lineHeight: "80%" }}
+                    >
+                      #
+                    </p>
+                  </div>
+                  <div>
+                    <p className="xl:text-8xl text-7xl pb-3">BEAUTY</p>
+                    <p className="xl:text-7xl text-5xl pb-3">MOVE YOU</p>
+                    <p className="xl:text-3xl text-xl font-TTnorm">
+                      Bergerak membawa manfaat
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+            <div
+              className="pt-4 text-white w-full grid lg:grid-cols-3 grid-cols-1 lg:bg-cover lg:hidden"
+              style={{
+                // height: "800px",
+                backgroundImage: "url('/background.png')",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center center",
+              }}
+            >
+              <div className="lg:hidden inline">
+                <div>
+                  <a href="https://www.wardahbeauty.com/" target="_blank">
+                    <img
+                      src={"/logo-wardah-hijau-tua.png"}
+                      className="xs:justify-self-start justify-self-center ml-5 w-20 mt-3 col"
+                    />
+                  </a>
+                </div>
+                <motion.div
+                  className="text-wardah-ardent xs:text-left text-center flex justify-center mt-10"
+                  animate={
+                    inView && {
+                      x: 0,
+                      opacity: 1,
+                    }
+                  }
+                  initial={{
+                    x: "100vh",
+                    opacity: 0,
+                  }}
+                  transition={transition}
+                >
+                  <div className="flex">
+                    <div>
+                      <p
+                        className="font-TTnormT h-auto sm:text-10xl text-9xl"
+                        style={{ lineHeight: "80%" }}
+                      >
+                        #
+                      </p>
+                    </div>
+                    <div className="font-TTnormT font-bold">
+                      <p className="sm:text-8xl pb-1 text-5xl">BEAUTY</p>
+                      <p className="sm:text-7xl pb-1 text-4xl">MOVE YOU</p>
+                      <p className="sm:text-3xl text-lg">
+                        Bergerak membawa manfaat
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+              <motion.div
+                className="w-full h-auto lg:hidden xs:bg-cover bg-contain bg-no-repeat"
+                // style={{
+                //   backgroundImage: "url('/talent-mobile.png')",
+                // }}
+                animate={inView && animate}
+                initial={init}
+                transition={transition}
+              >
+                <img src="/talent-mobile.png" width="100%" />
+              </motion.div>
+            </div>
+          </div>
+        )}
+      </InView>
     </div>
   );
 }

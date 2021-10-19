@@ -2,14 +2,14 @@ import React from "react";
 import Card, { CardProps } from "./Card";
 import { InView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import { AnimateProps, TransitionProps } from "./MainBody";
+import { AnimateProps, TransitionProps } from "../../pages/index";
 
 export default function WebContent(props: {
   datas: CardProps[];
   animate: AnimateProps;
   init: AnimateProps;
   transition: TransitionProps;
-  modal: () => void
+  modal: () => void;
 }) {
   const [state, setState] = React.useState<{
     selected: string;
@@ -36,12 +36,17 @@ export default function WebContent(props: {
   return (
     <>
       {/* Navigation */}
-      <InView threshold={0.2}>
+      <InView threshold={[0.4, 0.2]}>
         {({ inView, ref, entry }) => (
           <div ref={ref}>
             <motion.div
               className="flex place-content-center space-x-16 text-lg text-gray-400 font-medium border-b-1"
-              animate={inView && animate}
+              animate={
+                inView ||
+                (entry?.boundingClientRect.y && entry?.boundingClientRect.y < 0)
+                  ? animate
+                  : init
+              }
               initial={init}
               transition={transition}
             >

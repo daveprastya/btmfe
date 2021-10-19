@@ -2,14 +2,14 @@ import React, { MutableRefObject } from "react";
 import Card, { CardProps } from "./Card";
 import { InView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import { AnimateProps, TransitionProps } from "./MainBody";
+import { AnimateProps, TransitionProps } from "../../pages/index";
 
 export default function MobileContent(props: {
   datas: CardProps[];
   animate: AnimateProps;
   init: AnimateProps;
   transition: TransitionProps;
-  modal: () => void
+  modal: () => void;
 }) {
   const eduRef = React.useRef<HTMLDivElement | null>(null);
   const enviRef = React.useRef<HTMLDivElement | null>(null);
@@ -28,11 +28,14 @@ export default function MobileContent(props: {
 
   return (
     <div className="text-left ml-4">
-      <InView threshold={0.2}>
+      <InView threshold={[0.4, 0.2]}>
         {({ inView, ref, entry }) => (
           <div ref={ref}>
             <motion.div
-              animate={inView && animate}
+              animate={inView ||
+                (entry?.boundingClientRect.y && entry?.boundingClientRect.y < 0)
+                  ? animate
+                  : init}
               initial={init}
               transition={transition}
             >
@@ -73,12 +76,15 @@ export default function MobileContent(props: {
           </div>
         )}
       </InView>
-      <InView threshold={0.2}>
+      <InView threshold={[0.4, 0.2]}>
         {({ inView, ref, entry }) => (
           <div ref={ref}>
             <motion.div
               className="pt-8"
-              animate={inView && animate}
+              animate={inView ||
+                (entry?.boundingClientRect.y && entry?.boundingClientRect.y < 0)
+                  ? animate
+                  : init}
               initial={init}
               transition={transition}
             >
@@ -118,12 +124,17 @@ export default function MobileContent(props: {
           </div>
         )}
       </InView>
-      <InView threshold={0.2}>
+      <InView threshold={[0.4, 0.2]}>
         {({ inView, ref, entry }) => (
           <div ref={ref}>
             <motion.div
               className="pt-8"
-              animate={inView && animate}
+              animate={
+                inView ||
+                (entry?.boundingClientRect.y && entry?.boundingClientRect.y < 0)
+                  ? animate
+                  : init
+              }
               initial={init}
               transition={transition}
             >
