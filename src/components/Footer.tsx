@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <div className="text-white bg-wardah-primary">
-      <div className="py-7">
+      {/* <div className="py-7">
         <div className="text-center text-xl pb-6 px-9 md:text-3xl md:w-7/12 m-auto font-light leading-none">
           <p>
             <span className="mr-1 font-semibold">Beauty That Moves</span>is a
@@ -22,7 +22,7 @@ export default function Footer() {
             </span>
           </p>
         </div>
-      </div>
+      </div> */}
       <div className="flex flex-row border-t-1 border-opacity-5 md:mx-28 mx-3 py-8 place-content-center space-x-4 text-wardah-primary">
         <a href="https://www.instagram.com/wardahbeauty/" target="_blank">
           <div className="bg-white h-10 w-10 rounded-full flex items-center">
@@ -39,11 +39,11 @@ export default function Footer() {
             <i className="fab fa-twitter m-auto" />
           </div>
         </a>
-        <a href="tel:628041401123" target="_blank">
+        {/* <a href="tel:628041401123" target="_blank">
           <div className="bg-white h-10 w-10 rounded-full flex items-center">
             <i className="fas fa-phone-alt m-auto" />
           </div>
-        </a>
+        </a> */}
         <a href="https://api.whatsapp.com/send/?phone=6287701123000&text&app_absent=0" target="_blank">
           <div className="bg-white h-10 w-10 rounded-full flex items-center">
             <img
