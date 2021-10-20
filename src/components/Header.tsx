@@ -67,7 +67,7 @@ export default function Header(props: {
                   </div>
                   <div>
                     <p className="xl:text-8xl text-7xl pb-3">BEAUTY</p>
-                    <p className="xl:text-7xl text-5xl pb-3">MOVE YOU</p>
+                    <p className="xl:text-7xl text-5xl pb-3">MOVES YOU</p>
                     <p className="xl:text-3xl text-xl font-TTnorm">
                       Bergerak membawa manfaat
                     </p>
@@ -118,7 +118,7 @@ export default function Header(props: {
                     </div>
                     <div className="font-TTnormT font-bold">
                       <p className="sm:text-8xl pb-1 text-5xl">BEAUTY</p>
-                      <p className="sm:text-7xl pb-1 text-4xl">MOVE YOU</p>
+                      <p className="sm:text-7xl pb-1 text-4xl">MOVES YOU</p>
                       <p className="sm:text-3xl text-lg">
                         Bergerak membawa manfaat
                       </p>
