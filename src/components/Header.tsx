@@ -67,7 +67,7 @@ export default function Header(props: {
                   </div>
                   <div>
                     <p className="xl:text-8xl text-7xl pb-3">BEAUTY</p>
-                    <p className="xl:text-7xl text-5xl pb-3">MOVES YOU</p>
+                    <p className="xl:text-6xl text-5xl pb-3">MOVES YOU</p>
                     <p className="xl:text-3xl text-xl font-TTnorm">
                       Bergerak membawa manfaat
                     </p>
