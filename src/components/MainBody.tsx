@@ -45,7 +45,7 @@ export default function MainBody(props: {
         setIsMobile(true);
       }
     }
-  }, [reff.current]);
+  }, [reff.current?.clientWidth]);
 
   const { animate, init, transition } = props;
 
