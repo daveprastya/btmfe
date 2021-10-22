@@ -37,6 +37,9 @@ export default function Card(props: {
               className={`flex flex-col mb-12 shadow-sm ${
                 props.isMobile && "w-72"
               }`}
+              style={{
+                maxWidth: '315px'
+              }}
               animate={checkView}
               initial={init}
               transition={{
@@ -78,7 +81,7 @@ export default function Card(props: {
                 </div>
                 <img
                   src={props.data.image}
-                  style={{ height: "353px", width: "100%" }}
+                  style={{ height: "353px", width: "315px" }}
                 />
               </div>
               <div
