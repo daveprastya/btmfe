@@ -32,15 +32,17 @@ export default function MobileContent(props: {
         {({ inView, ref, entry }) => (
           <div ref={ref}>
             <motion.div
-              animate={inView ||
+              animate={
+                inView ||
                 (entry?.boundingClientRect.y && entry?.boundingClientRect.y < 0)
                   ? animate
-                  : init}
+                  : init
+              }
               initial={init}
               transition={transition}
             >
               <div className="flex place-content-between mr-4">
-                <p className="text-4xl font-light text-wardah-primary">
+                <p className="text-4xl font-extrabold font-TTnorm text-wardah-ardent">
                   EDUCATION
                 </p>
                 <div className="text-2xl font-extralight space-x-10">
@@ -81,15 +83,17 @@ export default function MobileContent(props: {
           <div ref={ref}>
             <motion.div
               className="pt-8"
-              animate={inView ||
+              animate={
+                inView ||
                 (entry?.boundingClientRect.y && entry?.boundingClientRect.y < 0)
                   ? animate
-                  : init}
+                  : init
+              }
               initial={init}
               transition={transition}
             >
               <div className="flex place-content-between mr-4">
-                <p className="text-4xl font-light text-wardah-primary">
+                <p className="text-4xl font-extrabold font-TTnorm text-wardah-ardent">
                   ENVIRONTMENT
                 </p>
                 <div className="text-2xl font-extralight space-x-10">
@@ -139,7 +143,7 @@ export default function MobileContent(props: {
               transition={transition}
             >
               <div className="flex place-content-between mr-4">
-                <p className="text-4xl font-light text-wardah-primary">
+                <p className="text-4xl font-extrabold font-TTnorm text-wardah-ardent">
                   HEALTH
                 </p>
                 <div className="text-2xl font-extralight space-x-10">

@@ -54,8 +54,8 @@ export default function WebContent(props: {
                 <button
                   className={`${
                     state.selected === "ALL" &&
-                    "text-wardah-primary border-b-4 pb-7 border-wardah-primary font-semibold pointer-events-none"
-                  } hover:text-wardah-primary hover:border-b-4 pb-8 hover:border-wardah-primary`}
+                    "text-wardah-ardent border-b-4 pb-7 border-wardah-ardent font-semibold pointer-events-none"
+                  } hover:text-wardah-ardent hover:border-b-4 pb-8 hover:border-wardah-ardent`}
                   onClick={() => isFiltered("ALL")}
                 >
                   ALL
@@ -65,8 +65,8 @@ export default function WebContent(props: {
                 <button
                   className={`${
                     state.selected === "EDUCATION" &&
-                    "text-wardah-primary border-b-4 pb-7 border-wardah-primary font-semibold pointer-events-none"
-                  } hover:text-wardah-primary hover:border-b-4 pb-8 hover:border-wardah-primary`}
+                    "text-wardah-ardent border-b-4 pb-7 border-wardah-ardent font-semibold pointer-events-none"
+                  } hover:text-wardah-ardent hover:border-b-4 pb-8 hover:border-wardah-ardent`}
                   onClick={() => isFiltered("EDUCATION")}
                 >
                   EDUCATION
@@ -76,8 +76,8 @@ export default function WebContent(props: {
                 <button
                   className={`${
                     state.selected === "ENVIRONTMENT" &&
-                    "text-wardah-primary border-b-4 pb-7 border-wardah-primary font-semibold pointer-events-none"
-                  } hover:text-wardah-primary hover:border-b-4 pb-8 hover:border-wardah-primary`}
+                    "text-wardah-ardent border-b-4 pb-7 border-wardah-ardent font-semibold pointer-events-none"
+                  } hover:text-wardah-ardent hover:border-b-4 pb-8 hover:border-wardah-ardent`}
                   onClick={() => isFiltered("ENVIRONTMENT")}
                 >
                   ENVIRONTMENT
@@ -87,8 +87,8 @@ export default function WebContent(props: {
                 <button
                   className={`${
                     state.selected === "HEALTH" &&
-                    "text-wardah-primary border-b-4 pb-7 border-wardah-primary font-semibold pointer-events-none"
-                  } hover:text-wardah-primary hover:border-b-4 pb-8 hover:border-wardah-primary`}
+                    "text-wardah-ardent border-b-4 pb-7 border-wardah-ardent font-semibold pointer-events-none"
+                  } hover:text-wardah-ardent hover:border-b-4 pb-8 hover:border-wardah-ardent`}
                   onClick={() => isFiltered("HEALTH")}
                 >
                   HEALTH
