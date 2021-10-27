@@ -18,7 +18,7 @@ export default function Header(props: {
             <div
               className="pt-4 text-white w-full lg:grid lg:grid-cols-3 grid-cols-1 lg:bg-cover hidden"
               style={{
-                height: "900px",
+                height: "70vw",
                 backgroundImage: "url('/background.png')",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center center",
@@ -35,7 +35,7 @@ export default function Header(props: {
               <div className="hidden lg:inline"></div>
               <div className="hidden lg:inline"></div>
               <motion.img
-                src={"/talent.png"}
+                src={"/talent-HR.png"}
                 className="hidden lg:absolute lg:inline mt-16 w-full"
                 animate={inView && animate}
                 initial={init}
@@ -43,7 +43,7 @@ export default function Header(props: {
               />
               <div className="lg:col-span-2 lg:inline hidden"></div>
               <motion.div
-                className="text-wardah-ardent font-TTnormXS mt-32 lg:inline hidden text-center"
+                className="text-wardah-ardent font-TTnormXS mt-32 lg:inline hidden text-center -ml-20 font-bold"
                 animate={
                   inView && {
                     x: 0,
@@ -56,29 +56,43 @@ export default function Header(props: {
                 }}
                 transition={transition}
               >
-                <div className="flex">
-                  <div className="-ml-28">
+                <div className="flex justify-center">
+                  <div>
                     <p
                       className="font-TTnormT h-auto"
-                      style={{ fontSize: "200px", lineHeight: "80%" }}
+                      style={{ fontSize: "12vw", lineHeight: "80%" }}
                     >
                       #
                     </p>
                   </div>
                   <div>
-                    <p className="xl:text-8xl text-7xl pb-3">BEAUTY</p>
-                    <p className="xl:text-6xl text-5xl pb-4">MOVES YOU</p>
-                    <p className="xl:text-5xl text-4xl font-TTnormS">
-                      BRAVE BEAUTIES
+                    <p
+                      style={{
+                        fontSize: "6vw",
+                        lineHeight: "90%",
+                        textAlign: "left",
+                      }}
+                    >
+                      BEAUTY
+                    </p>
+
+                    <p style={{ fontSize: "4vw", lineHeight: "90%" }}>
+                      MOVES YOU
                     </p>
                   </div>
                 </div>
+
+                <p
+                  className="font-TTnormS text-center pl-3"
+                  style={{ fontSize: "3.8vw", lineHeight: "90%" }}
+                >
+                  BRAVE BEAUTIES
+                </p>
               </motion.div>
             </div>
             <div
               className="pt-4 text-white w-full grid lg:grid-cols-3 grid-cols-1 lg:bg-cover lg:hidden"
               style={{
-                // height: "800px",
                 backgroundImage: "url('/background.png')",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center center",
@@ -94,7 +108,7 @@ export default function Header(props: {
                   </a>
                 </div>
                 <motion.div
-                  className="text-wardah-ardent xs:text-left text-center flex justify-center mt-10"
+                  className="text-wardah-ardent xs:text-left text-center flex flex-col justify-center mt-10 font-bold mb-5"
                   animate={
                     inView && {
                       x: 0,
@@ -107,28 +121,42 @@ export default function Header(props: {
                   }}
                   transition={transition}
                 >
-                  <div className="flex">
+                  <div className="flex justify-center">
                     <div>
                       <p
-                        className="font-TTnormT h-auto sm:text-10xl text-9xl"
-                        style={{ lineHeight: "80%" }}
+                        className="font-TTnormT h-auto"
+                        style={{ fontSize: "28vw", lineHeight: "80%" }}
                       >
                         #
                       </p>
                     </div>
-                    <div className="font-TTnormT font-bold text-center">
-                      <p className="sm:text-8xl pb-1 text-5xl">BEAUTY</p>
-                      <p className="sm:text-6xl pb-2 text-4xl">MOVES YOU</p>
-                      <p className="sm:text-5xl text-2xl font-TTnormS">BRAVE BEAUTIES</p>
+                    <div className="font-TTnormT">
+                      <p
+                        style={{
+                          fontSize: "14vw",
+                          lineHeight: "90%",
+                          textAlign: "left",
+                        }}
+                      >
+                        BEAUTY
+                      </p>
+
+                      <p style={{ fontSize: "9vw", lineHeight: "90%" }}>
+                        MOVES YOU
+                      </p>
                     </div>
                   </div>
+
+                  <p
+                    className="font-TTnormS text-center pl-3"
+                    style={{ fontSize: "8.5vw", lineHeight: "90%" }}
+                  >
+                    BRAVE BEAUTIES
+                  </p>
                 </motion.div>
               </div>
               <motion.div
                 className="w-full h-auto lg:hidden xs:bg-cover bg-contain bg-no-repeat"
-                // style={{
-                //   backgroundImage: "url('/talent-mobile.png')",
-                // }}
                 animate={inView && animate}
                 initial={init}
                 transition={transition}
