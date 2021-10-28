@@ -39,7 +39,7 @@ export default function MainBody(props: {
   React.useEffect(() => {
     if (reff) {
       // @ts-ignore
-      if (reff.current?.clientWidth >= 768) {
+      if (reff.current?.clientWidth >= 1000) {
         setIsMobile(false);
       } else {
         setIsMobile(true);
@@ -69,13 +69,13 @@ export default function MainBody(props: {
               initial={init}
               transition={transition}
             >
+              <p className="sm:text-6xl text-3xl">BEAUTY MOVES YOU</p>
               <p className="sm:text-5xl text-2xl lg:mb-3 mb-1">
-                Brave Beauties adalah
+                The Brave Beauties
               </p>
-              <p className="sm:text-6xl text-3xl">BEAUTY THAT MOVES</p>
             </motion.div>
             <motion.div
-              className="md:text-lg sm:text-base text-sm pb-14 md:m-auto lg:w-7/12 font-TTnorm"
+              className="md:text-lg text-sm pb-14 md:m-auto font-TTnorm"
               animate={
                 inView ||
                 (entry?.boundingClientRect.y && entry?.boundingClientRect.y < 0)
@@ -85,13 +85,33 @@ export default function MainBody(props: {
               initial={init}
               transition={transition}
             >
-              Mereka adalah wanita yang berani mengekspresikan kecantikannya,
-              dengan sikap yang membawa dampak baik bagi orang-orang di
-              sekitarnya. Mereka percaya bahwa dengan menggunakan kecantikan
-              mereka, suara mereka dapat didengar dengan lantang dan tindakan
-              mereka dapat dianggap serius. Mereka adalah agen perubahan
-              kecantikan, yang menginspirasi dan menggerakkan hati orang untuk
-              melakukan kebaikan yang lebih besar.
+              <div className="lg:inline hidden">
+                <p>
+                  Teruntuk wanita yang berani mengekspresikan kecantikannya,
+                  dengan sikap yang membawa dampak baik
+                </p>
+                <p>
+                  bagi orang-orang di sekitar. Wanita yang percaya dengan
+                  didukung kecantikan dan sikapnya, suara mereka dapat didengar
+                </p>
+                <p>
+                  dengan lantang dan tindakan mereka dapat dianggap serius.
+                  Mereka adalah agen perubahan kecantikan,
+                </p>
+                <p>
+                  yang menginspirasi dan menggerakkan hati orang untuk melakukan
+                  kebaikan yang lebih besar.
+                </p>
+              </div>
+              <div className="lg:hidden inline">
+                Teruntuk wanita yang berani mengekspresikan kecantikannya,
+                dengan sikap yang membawa dampak baik bagi orang-orang di
+                sekitar. Wanita yang percaya dengan didukung kecantikan dan
+                sikapnya, suara mereka dapat didengar dengan lantang dan
+                tindakan mereka dapat dianggap serius. Mereka adalah agen
+                perubahan kecantikan, yang menginspirasi dan menggerakkan hati
+                orang untuk melakukan kebaikan yang lebih besar.
+              </div>
             </motion.div>
           </div>
         )}
