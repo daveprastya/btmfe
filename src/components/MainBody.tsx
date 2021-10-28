@@ -69,7 +69,7 @@ export default function MainBody(props: {
               initial={init}
               transition={transition}
             >
-              <p className="sm:text-6xl text-3xl">BEAUTY THAT MOVES</p>
+              <p className="sm:text-6xl text-3xl">BEAUTY MOVES YOU</p>
               <p className="sm:text-5xl text-2xl lg:mb-3 mb-1">
                 The Brave Beauties
               </p>
